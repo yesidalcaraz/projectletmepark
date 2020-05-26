@@ -1,0 +1,62 @@
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Let Me Park</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static '/css/estilos2.css' %}">
+    <script src="https://kit.fontawesome.com/ac5fa3b011.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <div id="draggablePadre">
+        <div id="mapa"></div>
+        <div class="row">
+            <div class="col-xs-12 col-md-4 col-lg-4">
+                <div id="buscador">
+                    <img class="logo" src="{% static 'img/logo2.png' %}" type="submit"
+                        onclick="javascript:window.location.reload();">
+                    <input type="search" name="direccion" id="direccion" size="10" placeholder="Escriba dirección..." />
+                    <i id="miboton" name="myBtn" type="submit" class="fas fa-search fa-lg" style="color:#a71d21;"></i>
+
+                    <div id="contenidos_1" style="display:none;">
+                        <select name="sele" id="select_sh">
+                            <option value="cero" disabled selected>Seleccionar</option>
+                            <option value="todas">Todas</option>
+                            <option value="uno">Hoy</option>
+                            <option value="dos">Ayer</option>
+                            <option value="tres">Antes de ayer</option>
+                        </select>
+                    </div>
+                    <a id="enlace_1" href="#" onclick="muestraOculta('contenidos_1','enlace_1')"><i
+                            class="fas fa-chevron-down" style="color:#a71d21;"></i>Ver días Reservas</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/@google/markerclustererplus@4.0.1/dist/markerclustererplus.min.js"></script>
+
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAHWF4S03V4kODAXed5C81Ka5j25u5Wu-4&callback=cargarMapa&libraries=places">
+    </script>
+
+    <script src="{% static '/js/jquery-1.8.2.min.js' %}"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="{% static 'js/fontawesome-markers.min.js' %}"></script>
+    <script src="{% static 'js/funcional.js' %}"></script>
+
+    <script>
+        $(function () {
+            $("#buscador").draggable({
+                containment: "parent"
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>

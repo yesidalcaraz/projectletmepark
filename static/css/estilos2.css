@@ -1,0 +1,90 @@
+body {
+    margin: 0;
+}
+
+#mapa {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+#buscador {
+    display: inline-block;
+    background-color: white;
+    position: relative;
+    bottom: 40px;
+    left: 40px;
+    width: 300px;
+    padding: 10px;
+    margin-top: 50px;
+    border-radius: 10px;
+    border: 2.5px solid#a71d21;
+    height: 125px;
+}
+
+#select_sh {
+    font-size: small;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    width: 100px;
+    border-radius: 5px;
+    border: 1.5px solid #a71d21;
+}
+a:link{
+text-decoration: none;
+font-size:small;
+color:#a71d21;
+
+}
+
+#buscador input {
+    width: 246px;
+    border-radius: 5px;
+    border: 1.5px solid #a71d21;
+    margin-top: 50px;
+}
+
+
+.logo {
+    width: 80px;
+    position: absolute;
+    float: left;
+}
+
+#draggable {
+    width: 100%;
+    margin-top: 500px;
+    float: left;
+}
+
+#draggablePadre {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+}
+
+#datoPop {
+    width: 180px;
+    height: 150px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+#datoPop::-webkit-scrollbar {
+    width: 0.5em;
+}
+
+#datoPop::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+#datoPop::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    outline: 1px solid slategrey;
+}
+
+.list-group-item {
+    margin: 0;
+    padding: 3px;
+}

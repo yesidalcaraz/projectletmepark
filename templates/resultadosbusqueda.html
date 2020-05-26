@@ -1,0 +1,33 @@
+<html>
+
+<body>
+
+    <p>estas buscando: <strong>{{busqueda|length}}</strong></p>
+
+    {% if busqueda %}
+
+    <p>Busqueda Encontrada:{{busqueda|length}} busqueda</p>
+    <hr>
+    <ul>
+
+        {% for busquedas in busqueda %}
+        <li>
+            {{busquedas.name}} &nbsp; {{busquedas.provider}}
+        </li>
+        {% endfor %}
+        {% comment %} Este for se usa para probar la busquedaAjax desde django
+        {% for parkings in parking %}
+        <li>
+            {{parkings.name}} &nbsp; {{parkings.provider}}
+        </li>
+        {% endfor %} {% endcomment %}
+    </ul>
+    {% else %}
+    <hr>
+    <p>Articulo no Encontrado</p>
+
+    {% endif %}
+
+</body>
+
+</html>
