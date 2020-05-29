@@ -77,14 +77,11 @@ function ConsultaAjaxParkings(lat, lng, map) {
     var southWest = bounds.getSouthWest();
     var northEast = bounds.getNorthEast();
 
-
     var minLat = southWest.lat();
     var minLon = southWest.lng();
 
     var maxLat = northEast.lat();
     var maxLon = northEast.lng();
-
-
 
     var icon = {
         url: "/static/img/pall.png",
@@ -395,7 +392,6 @@ function Iteracionbooking(hoyString, data, map, icon2) {
                 draggable: true,
             });
 
-
             marcadores.push(marker);
 
            
@@ -455,7 +451,6 @@ function DeleteParkings() {
     }
    
 }
-
 
 function muestraOculta(parrafo, enla) {
     var elemento = document.getElementById(parrafo);
